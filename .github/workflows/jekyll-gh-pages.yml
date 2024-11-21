@@ -31,12 +31,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
-        run: |
-          npm install
-          npm run build
+        env:
+          BUILD_SCRIPT: npm install && npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
