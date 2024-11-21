@@ -30,7 +30,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Install and Build 🔧 
+      - name: Build with Jekyll
+        with:
+          source: ./
+          destination: ./_site
         run: |
           npm install
           npm run build
