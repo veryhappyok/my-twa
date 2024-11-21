@@ -30,15 +30,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-        env:
-          BUILD_SCRIPT: npm install && npm run build
+      - name: Build
+        run: pnpm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload dist folder
+          path: './dist'
 
   # Deployment job
   deploy:
