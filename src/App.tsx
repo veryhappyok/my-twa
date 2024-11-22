@@ -3,6 +3,7 @@ import { TonConnectButton } from '@tonconnect/ui-react';
 import { useTonConnect } from './hooks/useTonConnect';
 import { useCounterContract } from './hooks/useCounterContract';
 import '@twa-dev/sdk';
+import { isTMA } from '@telegram-apps/bridge';
 
 
 function App() {
@@ -13,8 +14,8 @@ function App() {
 
   const WebApp = (window as any)?.Telegram?.WebApp;
   console.log(window);
-  alert((window as any)?.Telegram);
-  alert((window as any)?.Telegram?.WebApp);
+
+  const res = isTMA('simple');
 
   return (
     <div className='App'>
@@ -49,6 +50,11 @@ function App() {
         <div>
           <div>window.telegram:</div>
           <div>{(window as any).telegram}</div>
+        </div>
+
+        <div>
+          <div>isTMA:</div>
+          <div>{res}</div>
         </div>
 
         <a
