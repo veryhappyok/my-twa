@@ -9,6 +9,8 @@ function App() {
   const { connected } = useTonConnect();
   const { value, address, sendIncrement } = useCounterContract();
 
+  const ua = window.navigator.userAgent;
+
   return (
     <div className='App'>
       <div className='Container'>
@@ -22,6 +24,11 @@ function App() {
         <div className='Card'>
           <b>Counter Value</b>
           <div>{value ?? 'Loading...'}</div>
+        </div>
+
+        <div>
+          <div>Ua:</div>
+          <div>{ua}</div>
         </div>
 
         <a
