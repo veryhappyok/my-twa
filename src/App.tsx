@@ -16,6 +16,7 @@ function App() {
   console.log(window);
 
   const res = isTMA('simple');
+  alert(res);
 
   return (
     <div className='App'>
