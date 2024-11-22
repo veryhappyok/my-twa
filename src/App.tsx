@@ -16,7 +16,6 @@ function App() {
   console.log(window);
 
   const res = isTMA('simple');
-  alert(res);
 
   return (
     <div className='App'>
@@ -55,7 +54,7 @@ function App() {
 
         <div>
           <div>isTMA:</div>
-          <div>{res}</div>
+          <div>{String(res)}</div>
         </div>
 
         <a
