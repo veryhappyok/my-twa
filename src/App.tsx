@@ -11,6 +11,8 @@ function App() {
 
   const ua = window.navigator.userAgent;
 
+  const WebApp = (window as any)?.Telegram?.WebApp;
+
   return (
     <div className='App'>
       <div className='Container'>
@@ -29,6 +31,11 @@ function App() {
         <div>
           <div>Ua:</div>
           <div>{ua}</div>
+        </div>
+
+        <div>
+          <div>WebApp:</div>
+          <div>{WebApp}</div>
         </div>
 
         <a
