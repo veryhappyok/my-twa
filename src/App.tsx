@@ -13,6 +13,8 @@ function App() {
 
   const WebApp = (window as any)?.Telegram?.WebApp;
   console.log(window);
+  alert((window as any)?.Telegram);
+  alert((window as any)?.Telegram?.WebApp);
 
   return (
     <div className='App'>
