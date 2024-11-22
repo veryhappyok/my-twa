@@ -12,6 +12,7 @@ function App() {
   const ua = window.navigator.userAgent;
 
   const WebApp = (window as any)?.Telegram?.WebApp;
+  console.log(window);
 
   return (
     <div className='App'>
@@ -36,6 +37,16 @@ function App() {
         <div>
           <div>WebApp:</div>
           <div>{WebApp}</div>
+        </div>
+
+        <div>
+          <div>window.Telegram:</div>
+          <div>{(window as any).Telegram}</div>
+        </div>
+
+        <div>
+          <div>window.telegram:</div>
+          <div>{(window as any).telegram}</div>
         </div>
 
         <a
